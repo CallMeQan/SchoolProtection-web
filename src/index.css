@@ -1,7 +1,21 @@
 #root{
     display: flex;
     margin: 0;
+    flex-direction: row;
 }
+
+.main{
+    height: 100%;
+    width: 85%;
+    position: absolute;
+    margin-left: 15%;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    left: 0;
+    padding-left: 0.5%;
+}
+
 .navbar {
     height: 100%;
     width: 15%;
@@ -21,15 +35,14 @@
     width: 100%;
 }
 .logoWrap{
-    background-color: aliceblue;
-    height: 150px;
-    width: 150px;
+    background-color: white;
+    height: 250px;
+    width: 250px;
     align-self: center;
     border-radius: 60%;
     margin-bottom: 50px;
 }
 .btn{
-    border-width: 0;
     background-color: #303a44;
     width: 100%;
     height: 75px;
@@ -39,10 +52,14 @@
     text-align: left;
     margin-bottom: 5px;
     text-decoration: none;
-    align-content: center;
+    padding-left: 10px;
 }
 .btn:hover{
     color: white;
+}
+
+.icon{
+    padding-top: 10px;
 }
 
 .navhref{

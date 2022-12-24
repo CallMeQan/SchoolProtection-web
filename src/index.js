@@ -1,27 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {RouterProvider, createBrowserRouter} from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
 
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Login/>,
+    },
+    {
+        path: '/home',
+        element: (<><NavBar/><Home/></>),
+    }
+]);
 
-function Layout(props) {
-    return (
-        <div>
-            <NavBar/>
-            <Routes>
-                <Route path="/" element={<Login/>}/>
-                <Route path="/home" element={<Home/>}/>
-            </Routes>
-        </div>
-    )
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-    <BrowserRouter>
-        <Layout/>
-    </BrowserRouter>
+ReactDOM.createRoot(document.getElementById("root")).render(
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>
 );

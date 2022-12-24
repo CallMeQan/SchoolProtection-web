@@ -1,3 +1,6 @@
+import * as Icon from 'react-bootstrap-icons';
+import {Link} from "react-router-dom";
+
 export default function NavBar() {
     return(
         <div className="navbar">
@@ -5,9 +8,9 @@ export default function NavBar() {
                 <img className="logo" src={require("../resources/logo.png")} alt="logo"/>
             </div>
             <nav className="navhref">
-                <a href={"/home"} className="btn home">Home</a>
-                <a href={"/diemdanh"} className="btn home">Điểm Danh</a>
-                <a href={"/danhsach"} className="btn home">Danh Sách</a>
+                <Link to="/home" className="btn home"><Icon.House className="icon"/> Home</Link>
+                <Link to="/diemdanh" className="btn home"><Icon.Book className="icon"/> Điểm Danh</Link>
+                <Link to="/danhsach" className="btn home"><Icon.List className="icon"/> Danh Sách</Link>
             </nav>
         </div>
     )
