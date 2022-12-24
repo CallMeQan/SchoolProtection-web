@@ -4,9 +4,11 @@ export default function NavBar() {
             <div className="logoWrap">
                 <img className="logo" src={require("../resources/logo.png")} alt="logo"/>
             </div>
-            <button className="btn home">Home</button>
-            <button className="btn dd">Điểm danh</button>
-            <button className="btn ds">Danh sách</button>
+            <nav className="navhref">
+                <a href={"/home"} className="btn home">Home</a>
+                <a href={"/diemdanh"} className="btn home">Điểm Danh</a>
+                <a href={"/danhsach"} className="btn home">Danh Sách</a>
+            </nav>
         </div>
     )
 }
