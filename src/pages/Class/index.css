@@ -1,0 +1,31 @@
+.item{
+    font-size: 50px;
+    font-weight: bold;
+    border-width: 1px;
+    border-color: #ababab;
+    background-color: white;
+    border-style: solid;
+    margin-left: 10px;
+    margin-top: 5px;
+    padding: 5px;
+    height: 75px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    border-radius: 10px;
+}
+
+.item:hover{
+    background-color: #ababab;
+    border-color: white;
+    border-bottom-width: 5px;
+    border-bottom-color: black;
+    cursor: pointer;
+}
+
+.item:active{
+    border-bottom-width: 0;
+}
+
+.main{
+    display: flex;
+    flex: 1;
+}
