@@ -24,13 +24,15 @@ export default function NavBar(){
             </div>
             <nav className="navhref" >
                 <Link to="/diemdanh" className="btnNav centerContent"><Icon.Book className="icon"/> Điểm Danh</Link>
+                <Link to="/lophoc" className="btnNav centerContent"><Icon.List className="icon"/> Lớp Học</Link>
                 <Link to="/hocsinh" className="btnNav centerContent"><Icon.Person className='icon'/> Học Sinh</Link>
                 <Link to="/giaovien" className="btnNav centerContent"><Icon.PersonFill className="icon"/> Giáo Viên</Link>
-                <Link to="/lophoc" className="btnNav centerContent"><Icon.List className="icon"/> Lớp Học</Link>
+                <Link to="/congravao" className="btnNav centerContent"><Icon.DoorClosedFill className="icon"/> Cổng ra vào</Link>
             </nav>
             <div className='botNav'>
-                <Button className="btnNav botBtn" href="/setting"><Icon.Gear width='100%' height='100%'/></Button>
-                <img className='icon' src={require("../resources/schoolLogo.png")} width='75px' height='75px' alt='School Logo'/>
+                <img className='icon' src={require("../resources/schoolLogo.png")} width='65vw' height='65vw' alt='School Logo'/>
+                <Button className="btnNav botBtn" onClick={()=>alert("SchoolProtection-web v1")}><Icon.Gear width='100%' height='100%'/></Button>
+                <Button className="btnNav botBtn" href="/"><Icon.DoorOpenFill width='100%' height='100%'/></Button>
             </div>
         </div>
     )

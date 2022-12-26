@@ -1,0 +1,14 @@
+[
+  {
+    "full_name": "Lê Quý Đôn",
+    "key": "lqd",
+    "student": true,
+    "teacher": true
+  },
+  {
+    "full_name": "Nam Kỳ Khởi Nghĩa 1",
+    "key": "nkkn1",
+    "student": true,
+    "teacher": true
+  }
+]

@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function DiemDanh(){
     return(
         <div className="main">

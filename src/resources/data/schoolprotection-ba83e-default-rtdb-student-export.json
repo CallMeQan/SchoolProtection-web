@@ -1,0 +1,85 @@
+[
+  {
+    "class": "11A7",
+    "gender": "Nam",
+    "image": "https://iili.io/H9v2DxI.jpg",
+    "name": "Nguyễn Lâm Hoàng Bảo",
+    "schoolId": 200134,
+    "status": {
+      "08_11_2022": false,
+      "14_11_2022": true,
+      "15_11_2022": true,
+      "chieu_23_11_2022": "15:49",
+      "sang_03_12_2022": "8:38",
+      "sang_17_11_2022": "9:23"
+    }
+  },
+  {
+    "class": "11A7",
+    "gender": "Nam",
+    "image": "https://iili.io/H9vdRYx.jpg",
+    "name": "Đan Nguyễn Nguyên Chương",
+    "schoolId": 200135,
+    "status": {
+      "08_11_2022": false,
+      "14_11_2022": true,
+      "15_11_2022": true,
+      "chieu_18_11_2022": "23:30",
+      "chieu_23_11_2022": "16:16",
+      "chieu_24_11_2022": "23:31",
+      "sang_01_12_2022": "10:20",
+      "sang_03_12_2022": "9:16",
+      "sang_17_11_2022": "9:23",
+      "sang_23_11_2022": "11:22",
+      "sang_25_11_2022": "1:1",
+      "sang_26_12_2022": "8:55"
+    }
+  },
+  {
+    "class": "11A7",
+    "gender": "Nam",
+    "image": "https://iili.io/H9ky6ss.jpg",
+    "name": "Seil Sepoor David",
+    "schoolId": 200136,
+    "status": {
+      "sang_17_11_2022": "9:23"
+    }
+  },
+  {
+    "class": "11A7",
+    "gender": "Nam",
+    "image": "https://iili.io/H9kbIHP.jpg",
+    "name": "Huỳnh Đăng Khoa",
+    "schoolId": 200137,
+    "status": {
+      "sang_03_12_2022": "9:16",
+      "sang_17_11_2022": "9:23"
+    }
+  },
+  {
+    "class": "11A7",
+    "gender": "Nữ",
+    "image": "https://iili.io/H9vqQnV.jpg",
+    "name": "Đỗ Thị Thuỳ Linh",
+    "schoolId": 200138,
+    "status": {
+      "chieu_18_11_2022": "22:45",
+      "sang_17_11_2022": "9:23",
+      "sang_23_11_2022": "08:43"
+    }
+  },
+  {
+    "class": "11A3",
+    "gender": "Nam",
+    "image": "https://iili.io/H9vft7s.jpg",
+    "name": "Châu Minh Quân",
+    "schoolId": 200159,
+    "status": {
+      "12_11_2022": false,
+      "13_11_2022": true,
+      "chieu_23_11_2022": "15:51",
+      "sang_23_11_2022": "11:23",
+      "sang_26_12_2022": "8:55"
+    }
+  }
+]

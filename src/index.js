@@ -5,9 +5,10 @@ import {RouterProvider, createBrowserRouter} from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Login from "./pages/Login/Login";
 import ErrorPage from "./pages/ErrorPage";
-import Class from "./pages/Class/Class";
-import Student from "./pages/Student/Student";
-import Teacher from "./pages/Teacher/Teacher";
+import Class from "./pages/ListOfSomething/Class/Class";
+import Student from "./pages/ListOfSomething/Student/Student";
+import Teacher from "./pages/ListOfSomething/Teacher/Teacher";
+import Gate from "./pages/ListOfSomething/Gate/Gate";
 import Setting from "./pages/Setting/Setting";
 import DiemDanh from "./pages/CheckIn/DiemDanh";
 
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
     {
         path: '/diemdanh',
         element: (<><NavBar/><DiemDanh/></>),
+        errorElement: <ErrorPage/>
+    },
+    {
+        path: '/congravao',
+        element: (<><NavBar/><Gate/></>),
         errorElement: <ErrorPage/>
     },
 

@@ -13,6 +13,8 @@
     top: 0;
     overflow-x: hidden;
     left: 0;
+    display: flex;
+    flex: 1;
 }
 
 .logo{
@@ -21,8 +23,8 @@
 }
 .logoWrap{
     background-color: white;
-    height: 250px;
-    width: 250px;
+    height: 12vw;
+    width: 12vw;
     align-self: center;
     border-radius: 60%;
     margin-bottom: 50px;
