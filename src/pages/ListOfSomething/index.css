@@ -11,10 +11,9 @@
     display: flex;
     background-color: #3b4652;
     width: 100%;
-    height: 7%;
+    height: 8%;
     justify-content: flex-end;
     margin-bottom: 1px;
-    padding-bottom: 10px;
 }
 
 .titleMenu{
@@ -28,7 +27,7 @@
     width: 100%;
 }
 
-.item div img{
+.item div .avatar{
     object-fit: contain;
     width: 100%;
     height: 100%;

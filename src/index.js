@@ -10,7 +10,6 @@ import Student from "./pages/ListOfSomething/Student/Student";
 import Teacher from "./pages/ListOfSomething/Teacher/Teacher";
 import Gate from "./pages/ListOfSomething/Gate/Gate";
 import Setting from "./pages/Setting/Setting";
-import DiemDanh from "./pages/CheckIn/DiemDanh";
 
 const router = createBrowserRouter([
     {
@@ -36,11 +35,6 @@ const router = createBrowserRouter([
     {
         path: "/setting",
         element: (<><NavBar/><Setting/></>),
-        errorElement: <ErrorPage/>
-    },
-    {
-        path: '/diemdanh',
-        element: (<><NavBar/><DiemDanh/></>),
         errorElement: <ErrorPage/>
     },
     {

@@ -23,7 +23,6 @@ export default function NavBar(){
                 <img className="logo" src={require("../resources/logo.png")} alt="logo"/>
             </div>
             <nav className="navhref" >
-                <Link to="/diemdanh" className="btnNav centerContent"><Icon.Book className="icon"/> Điểm Danh</Link>
                 <Link to="/lophoc" className="btnNav centerContent"><Icon.List className="icon"/> Lớp Học</Link>
                 <Link to="/hocsinh" className="btnNav centerContent"><Icon.Person className='icon'/> Học Sinh</Link>
                 <Link to="/giaovien" className="btnNav centerContent"><Icon.PersonFill className="icon"/> Giáo Viên</Link>

@@ -15,7 +15,9 @@ export default class FormLogin extends React.Component{
                             <input type="password" placeholder="Nhập mật khẩu..."/>
                         </div>
                         <button type='submit' className='btnLogin'>Đăng Nhập</button>
-                        <p className="subtext">- Admin only</p>
+                        <p className="subtext" style={{display: "flex", justifyContent: "space-between"}}>
+                            - Admin only <img src={require("../../resources/schoolLogo.png")} alt="school" width="15%"/>
+                        </p>
                     </div>
                 </form>
             </div>
