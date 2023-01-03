@@ -1,8 +1,9 @@
 import React from 'react';
 import CalendarRewrite from "../../../components/CalendarButton/CalendarRewrite";
-import ExportDiv from '../ExportListDiv';
+import DivList from '../../../components/DivList/NormalList/DivList';
+
 export default function Student(){
-    const listOfStudent = ExportDiv(require("../../../resources/data/schoolprotection-ba83e-default-rtdb-student-export.json"), (value)=>{
+    const listOfStudent = DivList(require("../../../resources/data/schoolprotection-ba83e-default-rtdb-student-export.json"), (value)=>{
         alert(value.name);
     });
     return(

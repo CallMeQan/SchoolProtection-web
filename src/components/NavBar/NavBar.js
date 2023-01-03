@@ -15,7 +15,6 @@ export default function NavBar(){
             if (listOfA[i].href === window.location.href){
                 listOfA[i].classList.add("activeBtn");
             }
-            console.log(window.location.href);
         }
     }, [location])
     return(

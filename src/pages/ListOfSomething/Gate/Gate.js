@@ -1,21 +1,13 @@
 import React from 'react';
-import {Button} from "react-bootstrap";
 import CalendarRewrite from "../../../components/CalendarButton/CalendarRewrite";
-import './gate.css';
+import GateList from "../../../components/DivList/GateList/GateList";
 
 const assignedGate = ['Nam Kỳ Khởi Nghĩa', 'Lê Quý Đôn', ];
 export default function Class(){
     function showCheckBox() {
     }
-    const listOfGate = assignedGate.map(name =>
-        <Button key={name} className='item itemGate' onClick={showCheckBox}>
-            <p>{name}</p>
-            <div>
-                <span>Học Sinh <input type='checkbox' value="Học Sinh"/><br/></span>
-                <span>Giáo Viên <input type='checkbox' value="Giáo Viên"/></span>
-            </div>
-        </Button>
-    );
+
+    const listOfGate = GateList(assignedGate, showCheckBox);
     return(
         <div className="main" style={{flexDirection:"column", flex:1}}>
             <div className="topMenu">

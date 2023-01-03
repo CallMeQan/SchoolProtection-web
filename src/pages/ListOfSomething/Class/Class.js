@@ -1,10 +1,10 @@
-import './index.css'
 import React from 'react';
 import {Button} from "react-bootstrap";
 import CalendarRewrite from "../../../components/CalendarButton/CalendarRewrite";
 import DateBtn from "../../../components/DateTimeButton/DateBtn";
 
 //Mục đích là hiện ra danh sách các lớp, sau đó ấn button sẽ hiện ra danh sách học sinh của lớp đó, với danh sách hs sẽ điểm danh
+// Mục đích đính chính lại thì cái mục đích trước đó chưa thế thực hiện vì ko có nhiều thời gian, giờ chỉ bấm vào và alert tên lớp và có bao nhiêu người
 const assignedClasses = ['11A3', '11A7'];
 export default function Class(){
     const listOfClass = assignedClasses.map((name) =>

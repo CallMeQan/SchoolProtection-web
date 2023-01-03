@@ -1,17 +1,21 @@
 import "./index.css"
 import React from "react";
-export default function DateBtn(){
-    function changeDate() {
-        const imgEle = document.getElementsByClassName("daylightImg")[0];
-        if (imgEle.alt === "day"){
-            imgEle.src = require("../../resources/afternoon.png");
-            return;
-        }
-        imgEle.src = require("../../resources/daytime.png");
-        console.log(imgEle.src);
-
+export default class DateBtn extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {morning: true};
+        this.changeDate = this.changeDate.bind(this);
     }
-    return (
-        <img src={require("../../resources/daytime.png")} className='daylightImg' alt='day' onClick={changeDate} style={{zIndex: 1}} />
-    )
+
+    changeDate = () => this.setState({morning: !this.state.morning});
+    
+
+    render(){
+        return(
+            <img src={
+                this.state.morning ? require("../../resources/daytime.png")
+                : require("../../resources/afternoon.png")
+            } className='daylightImg' alt='day' onClick={this.changeDate} style={{zIndex: 1}} />
+        )
+    }
 }
