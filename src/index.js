@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import {RouterProvider, createBrowserRouter} from "react-router-dom";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 import Login from "./pages/Login/Login";
 import ErrorPage from "./pages/ErrorPage";
 import Class from "./pages/ListOfSomething/Class/Class";

@@ -7,8 +7,8 @@ const assignedGate = ['Nam Kỳ Khởi Nghĩa', 'Lê Quý Đôn', ];
 export default function Class(){
     function showCheckBox() {
     }
-    const listOfGate = assignedGate.map((name) =>
-        <Button className='item itemGate' onClick={showCheckBox}>
+    const listOfGate = assignedGate.map(name =>
+        <Button key={name} className='item itemGate' onClick={showCheckBox}>
             <p>{name}</p>
             <div>
                 <span>Học Sinh <input type='checkbox' value="Học Sinh"/><br/></span>
@@ -27,4 +27,4 @@ export default function Class(){
             </div>
         </div>
     )
-};
+}

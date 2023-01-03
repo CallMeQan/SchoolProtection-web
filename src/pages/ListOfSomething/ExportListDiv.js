@@ -11,7 +11,7 @@ export default function exportDiv(items, action){
             }
         }
         return(
-            <Button className='item' onClick={() => action(item)}>
+            <Button key={item.schoolId} className='item' onClick={() => action(item)}>
                 <div style={{display: "flex"}}>
                     <img src={item.image} alt={item.name} className='avatar'/>
                     <div>

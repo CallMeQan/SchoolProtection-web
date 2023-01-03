@@ -8,7 +8,7 @@ import DateBtn from "../../../components/DateTimeButton/DateBtn";
 const assignedClasses = ['11A3', '11A7'];
 export default function Class(){
     const listOfClass = assignedClasses.map((name) =>
-        <Button className='item'><p style={{fontSize: "2vw"}}>{name}</p></Button>
+        <Button key={name} className='item'><p style={{fontSize: "2vw"}}>{name}</p></Button>
     );
     return(
         <div className="main" style={{flexDirection:"column", flex:1}}>
@@ -22,4 +22,4 @@ export default function Class(){
             </div>
         </div>
     )
-};
+}

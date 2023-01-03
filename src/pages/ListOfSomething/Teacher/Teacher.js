@@ -18,4 +18,4 @@ export default function Teacher(){
             </div>
         </div>
     )
-};
+}

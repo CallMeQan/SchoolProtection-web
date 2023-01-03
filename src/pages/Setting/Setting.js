@@ -7,4 +7,4 @@ export default function Setting(){
             <h1>This is Setting</h1>
         </div>
     )
-};
+}

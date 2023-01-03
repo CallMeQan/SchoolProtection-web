@@ -3,6 +3,7 @@ import {Link, useLocation} from "react-router-dom";
 import {Button} from "react-bootstrap";
 import React from 'react'
 import './index.css';
+import '../../resources/colorscheme.css'
 
 export default function NavBar(){
     const location = useLocation()
@@ -20,7 +21,7 @@ export default function NavBar(){
     return(
         <div className="navbar">
             <div className="logoWrap">
-                <img className="logo" src={require("../resources/logo.png")} alt="logo"/>
+                <img className="logo" src={require("../../resources/logo.png")} alt="logo"/>
             </div>
             <nav className="navhref" >
                 <Link to="/lophoc" className="btnNav centerContent"><Icon.List className="icon"/> Lớp Học</Link>
@@ -29,7 +30,7 @@ export default function NavBar(){
                 <Link to="/congravao" className="btnNav centerContent"><Icon.DoorClosedFill className="icon"/> Cổng ra vào</Link>
             </nav>
             <div className='botNav'>
-                <img className='icon' src={require("../resources/schoolLogo.png")} width='65vw' height='65vw' alt='School Logo'/>
+                <img className='icon' src={require("../../resources/schoolLogo.png")} width='65vw' height='65vw' alt='School Logo'/>
                 <Button className="btnNav botBtn" onClick={()=>alert("SchoolProtection-web v1")}><Icon.Gear width='100%' height='100%'/></Button>
                 <Button className="btnNav botBtn" href="/"><Icon.DoorOpenFill width='100%' height='100%'/></Button>
             </div>
