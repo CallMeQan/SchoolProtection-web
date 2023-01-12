@@ -1,6 +1,7 @@
 import React from 'react';
 import CalendarRewrite from "../../../components/CalendarButton/CalendarRewrite";
 import GateList from "../../../components/DivList/GateList/GateList";
+import '../index.css';
 
 const assignedGate = ['Nam Kỳ Khởi Nghĩa', 'Lê Quý Đôn', ];
 export default function Class(){

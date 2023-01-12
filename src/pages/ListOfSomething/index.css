@@ -1,0 +1,17 @@
+.topMenu{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: flex-end;
+}
+
+.titleMenu{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    color: var(--textColor);
+    font-size: 3vw;
+    font-weight: bold;
+}
+.topMenu:last-child {
+    margin-left: auto;
+}

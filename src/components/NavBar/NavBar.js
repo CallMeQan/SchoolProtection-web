@@ -20,7 +20,7 @@ export default function NavBar(){
             "height": activeWidthNewAnimHeight + "px",
             "width": activeWidthNewAnimWidth + "px"
         });
-        $(".navhref").on("click","li",function(e){
+        $(".navhref").on("click","li",function(){
             $('.navhref li').removeClass("active");
             $(this).addClass('active');
             var activeWidthNewAnimHeight = $(this).innerHeight();

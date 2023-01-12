@@ -5,7 +5,7 @@ export default class FormLogin extends React.Component{
     render(){
         return(
             <div className="remakeFlex">
-                <form className="loginBox" action='/giaovien'>
+                <form className="loginBox" action='/hocsinh'>
                     <img className="imgLogo" src={require("../../resources/logo.png")} alt="logo"/>
                     <div className="loginForm">
                         <div className="inputBox">
