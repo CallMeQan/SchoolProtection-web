@@ -1,32 +1,59 @@
 import * as Icon from 'react-bootstrap-icons';
-import {Link, useLocation} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import {Button} from "react-bootstrap";
-import React from 'react'
+import React, {useEffect} from 'react'
 import './index.css';
 import '../../resources/colorscheme.css'
+import $ from 'jquery';
 
 export default function NavBar(){
-    const location = useLocation()
+    function animation(){
+        let navBar = $(".navhref");
+        let currentActive = navBar.find(".activeBtn");
+        let activeWidthNewAnimHeight = currentActive.innerHeight();
+        let activeWidthNewAnimWidth = currentActive.innerWidth();
+        let itemPosNewAnimTop = currentActive.position();
+        let itemPosNewAnimLeft = currentActive.position();
+        $(".hori-selector").css({
+            "right":itemPosNewAnimTop.right + "px",
+            "left":itemPosNewAnimLeft.left + "px",
+            "height": activeWidthNewAnimHeight + "px",
+            "width": activeWidthNewAnimWidth + "px"
+        });
+        $(".navhref").on("click","a",function(e){
+            $('#navbarSupportedContent ul li').removeClass("activeBtn");
+            $(this).addClass('activeBtn');
+            let activeWidthNewAnimHeight = $(this).innerHeight();
+            let activeWidthNewAnimWidth = $(this).innerWidth();
+            let itemPosNewAnimTop = $(this).position();
+            let itemPosNewAnimLeft = $(this).position();
+            $(".hori-selector").css({
+                "right":itemPosNewAnimTop.right + "px",
+                "left":itemPosNewAnimLeft.left + "px",
+                "height": activeWidthNewAnimHeight + "px",
+                "width": activeWidthNewAnimWidth + "px"
+            });
+        });
+    }
 
-    React.useEffect(() => {
-        const listOfA = document.getElementsByClassName("btnNav");
-        for (let i = 0; i < listOfA.length; i++) {
-            listOfA[i].classList.remove("activeBtn");
-            if (listOfA[i].href === window.location.href){
-                listOfA[i].classList.add("activeBtn");
-            }
-        }
-    }, [location])
+    useEffect(() => {
+        animation();
+        $(window).on('resize', function(){
+            setTimeout(function(){ animation(); }, 500);
+        });
+    }, []);
+
     return(
         <div className="navbar">
             <div className="logoWrap">
                 <img className="logo" src={require("../../resources/logo.png")} alt="logo"/>
             </div>
             <nav className="navhref" >
-                <Link to="/lophoc" className="btnNav centerContent"><Icon.List className="icon"/> Lớp Học</Link>
-                <Link to="/hocsinh" className="btnNav centerContent"><Icon.Person className='icon'/> Học Sinh</Link>
-                <Link to="/giaovien" className="btnNav centerContent"><Icon.PersonFill className="icon"/> Giáo Viên</Link>
-                <Link to="/congravao" className="btnNav centerContent"><Icon.DoorClosedFill className="icon"/> Cổng ra vào</Link>
+                <div className="hori-selector" />
+                <NavLink to="/lophoc" className="btnNav centerContent"><Icon.List className="icon"/> Lớp Học</NavLink>
+                <NavLink to="/hocsinh" className="btnNav centerContent"><Icon.Person className='icon'/> Học Sinh</NavLink>
+                <NavLink to="/giaovien" className="btnNav centerContent activeBtn"><Icon.PersonFill className="icon"/> Giáo Viên</NavLink>
+                <NavLink to="/congravao" className="btnNav centerContent"><Icon.DoorClosedFill className="icon"/> Cổng ra vào</NavLink>
             </nav>
             <div className='botNav'>
                 <img className='icon' src={require("../../resources/schoolLogo.png")} width='65vw' height='65vw' alt='School Logo'/>

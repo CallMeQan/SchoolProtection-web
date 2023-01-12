@@ -13,8 +13,10 @@ export default function exportDiv(items, action){
         return(
             <Button key={item.schoolId} className='item' onClick={() => action(item)}>
                 <div style={{display: "flex"}}>
-                    <img src={item.image} alt={item.name} className='avatar'/>
-                    <div>
+                    <div className="avatar">
+                        <img src={item.image} alt={item.name}/>
+                    </div>
+                    <div className="information">
                         <p>ID: {item.schoolId}<br/>
                         Họ và Tên: {item.name}<br/>
                         Lớp Học: {item.class}
