@@ -19,17 +19,3 @@
     flex: 1;
     background-color: var(--main2);
 }
-
-.logo{
-    height: 100%;
-    width: 100%;
-}
-.logoWrap{
-    background-color: var(--main2);
-    height: 12vw;
-    width: 12vw;
-    align-self: center;
-    border-radius: 60%;
-    margin-bottom: 50px;
-}
-

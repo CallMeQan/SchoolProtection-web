@@ -8,34 +8,33 @@ import $ from 'jquery';
 
 export default function NavBar(){
     function animation(){
-        let navBar = $(".navhref");
-        let currentActive = navBar.find(".activeBtn");
-        let activeWidthNewAnimHeight = currentActive.innerHeight();
-        let activeWidthNewAnimWidth = currentActive.innerWidth();
-        let itemPosNewAnimTop = currentActive.position();
-        let itemPosNewAnimLeft = currentActive.position();
+        var tabsNewAnim = $('.navhref');
+        var activeItemNewAnim = tabsNewAnim.find('.active');
+        var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+        var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+        var itemPosNewAnimTop = activeItemNewAnim.position();
+        var itemPosNewAnimLeft = activeItemNewAnim.position();
         $(".hori-selector").css({
-            "right":itemPosNewAnimTop.right + "px",
+            "top":itemPosNewAnimTop.top + "px", 
             "left":itemPosNewAnimLeft.left + "px",
             "height": activeWidthNewAnimHeight + "px",
             "width": activeWidthNewAnimWidth + "px"
         });
-        $(".navhref").on("click","a",function(e){
-            $('#navbarSupportedContent ul li').removeClass("activeBtn");
-            $(this).addClass('activeBtn');
-            let activeWidthNewAnimHeight = $(this).innerHeight();
-            let activeWidthNewAnimWidth = $(this).innerWidth();
-            let itemPosNewAnimTop = $(this).position();
-            let itemPosNewAnimLeft = $(this).position();
+        $(".navhref").on("click","li",function(e){
+            $('.navhref li').removeClass("active");
+            $(this).addClass('active');
+            var activeWidthNewAnimHeight = $(this).innerHeight();
+            var activeWidthNewAnimWidth = $(this).innerWidth();
+            var itemPosNewAnimTop = $(this).position();
+            var itemPosNewAnimLeft = $(this).position();
             $(".hori-selector").css({
-                "right":itemPosNewAnimTop.right + "px",
+                "top":itemPosNewAnimTop.top + "px", 
                 "left":itemPosNewAnimLeft.left + "px",
                 "height": activeWidthNewAnimHeight + "px",
                 "width": activeWidthNewAnimWidth + "px"
             });
         });
     }
-
     useEffect(() => {
         animation();
         $(window).on('resize', function(){
@@ -48,17 +47,28 @@ export default function NavBar(){
             <div className="logoWrap">
                 <img className="logo" src={require("../../resources/logo.png")} alt="logo"/>
             </div>
-            <nav className="navhref" >
+            <ul className="navhref" >
                 <div className="hori-selector" />
-                <NavLink to="/lophoc" className="btnNav centerContent"><Icon.List className="icon"/> Lớp Học</NavLink>
-                <NavLink to="/hocsinh" className="btnNav centerContent"><Icon.Person className='icon'/> Học Sinh</NavLink>
-                <NavLink to="/giaovien" className="btnNav centerContent activeBtn"><Icon.PersonFill className="icon"/> Giáo Viên</NavLink>
-                <NavLink to="/congravao" className="btnNav centerContent"><Icon.DoorClosedFill className="icon"/> Cổng ra vào</NavLink>
-            </nav>
+                <li className='nav-item centerContent active'>
+                    <NavLink to="/hocsinh" className="nav-link centerContent">
+                        <Icon.Person className="icon"/> <i>Học Sinh</i>
+                    </NavLink>
+                </li>
+                <li className='nav-item centerContent'>
+                    <NavLink to="/giaovien" className="nav-link centerContent">
+                        <Icon.PersonFill className="icon"/> <i>Giáo Viên</i>
+                    </NavLink>
+                </li>
+                <li className='nav-item centerContent'>
+                    <NavLink to="/congravao" className="nav-link centerContent">
+                        <Icon.DoorClosedFill className="icon"/> <i>Cổng Ra Vào</i>
+                    </NavLink>
+                </li>
+            </ul>            
             <div className='botNav'>
                 <img className='icon' src={require("../../resources/schoolLogo.png")} width='65vw' height='65vw' alt='School Logo'/>
-                <Button className="btnNav botBtn" onClick={()=>alert("SchoolProtection-web v1")}><Icon.Gear width='100%' height='100%'/></Button>
-                <Button className="btnNav botBtn" href="/"><Icon.DoorOpenFill width='100%' height='100%'/></Button>
+                <Button className="botBtn" onClick={()=>alert("SchoolProtection-web v1")}><Icon.Gear width='100%' height='100%'/></Button>
+                <Button className="botBtn" href="/"><Icon.DoorOpenFill width='100%' height='100%'/></Button>
             </div>
         </div>
     )
