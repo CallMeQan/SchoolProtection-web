@@ -17,10 +17,6 @@
 }
 
 /*Logo of navbar*/
-.logo{
-    height: 100%;
-    width: 100%;
-}
 .logoWrap{
     background-color: var(--main2);
     height: 12vw;
@@ -28,12 +24,12 @@
     align-self: center;
     border-radius: 60%;
     margin-bottom: 10px;
+    transition: all .5s linear;
 }
 
 /*Main of navbar*/
 .navhref li {
     list-style-type: none;
-    float: left;
 }
 
 .hori-selector {
@@ -42,27 +38,53 @@
     transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     background-color: var(--main2);
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-  }
+    border-top-left-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+    margin-left: 1%;
+}
 
 .centerContent{
     display: flex;
     align-items: center;
 }
 
+/*none hover*/
+
+.navhref li a i{
+    display: none;
+    
+}
+
 .navhref li a{
     color: var(--main2);
     text-decoration: none;
-    font-size: 1.5vw;
-    display: block;
-    padding: 10%;
+    font-size: 1.8vw;
+    display: flex;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 4%;
+    padding-right: 5%;
     transition-duration: 0.4s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     position: relative;
     width: 100%;
     font-weight: bold;
 }
+
+/*On hover*/
+
+.navbar:hover ul li a i{
+    display: inline;
+}
+
+.navbar:hover .icon{
+    display: flex;
+}
+
+.navbar:hover .secondBotBtn{
+    display: flex;
+}
+
 
 .navhref > li.active > a{
     color: var(--textHighlight3);
@@ -88,7 +110,17 @@
     padding-bottom: 30px;
     justify-content: space-between;
     display: flex;
+    width: 100%;
+    height: 9%;
 }
+
+/* .icon{
+    display: none;
+}
+
+.secondBotBtn{
+    display: none;
+} */
 
 .botBtn:hover{
     color: var(--textHighlight2);

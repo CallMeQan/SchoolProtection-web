@@ -42,12 +42,24 @@ export default function NavBar(){
         });
     }, []);
 
+    function resizeFull(){
+        $(".botNav").children(".unused").css({
+            "display": "flex",
+        });
+    }
+
+    function resizeMin(){
+        $(".botNav").children(".unused").css({
+            "display": "none",
+        });
+    }
+
     return(
-        <div className="navbar">
+        <div className="navbar" onMouseOver={resizeFull} onMouseOut={resizeMin}>
             <div className="logoWrap">
-                <img className="logo" src={require("../../resources/logo.png")} alt="logo"/>
+                <img className="logo" width="100%" height="100%" src={require("../../resources/logo.png")} alt="logo"/>
             </div>
-            <ul className="navhref" >
+            <ul className="navhref">
                 <div className="hori-selector" />
                 <li className='nav-item centerContent active'>
                     <NavLink to="/hocsinh" className="nav-link centerContent">
@@ -66,9 +78,9 @@ export default function NavBar(){
                 </li>
             </ul>            
             <div className='botNav'>
-                <img className='icon' src={require("../../resources/schoolLogo.png")} width='65vw' height='65vw' alt='School Logo'/>
-                <Button className="botBtn" onClick={()=>alert("SchoolProtection-web v1")}><Icon.Gear width='100%' height='100%'/></Button>
-                <Button className="botBtn" href="/"><Icon.DoorOpenFill width='100%' height='100%'/></Button>
+                <Button className="botBtn firstBotBtn" onClick={()=>alert("SchoolProtection-web v1")}><Icon.Gear width='100%' height='100%'/></Button>
+                <Button className="botBtn unused" href="/"><Icon.DoorOpenFill width='100%' height='100%'/></Button>
+                <img className='icon unused' src={require("../../resources/schoolLogo.png")} width='65vw' height='65vw' alt='School Logo'/>
             </div>
         </div>
     )

@@ -11,8 +11,10 @@ export default function Student(){
     return(
         <div className="main" style={{flexDirection:"column", flex:1}}>
             <div className="topMenu">
-                <p className="titleMenu">Học Sinh</p>
-                <SearchBar/>
+                <div className='titleSearch'>
+                    <p className="titleMenu">Học Sinh</p>
+                    <SearchBar/>
+                </div>
                 <CalendarRewrite/>
             </div>
             <div className="listBox">

@@ -11,9 +11,11 @@ export default function Teacher(){
     return(
         <div className="main" style={{flexDirection:"column", flex:1}}>
             <div className="topMenu">
+                <div className='titleSearch'>
+                    <p className="titleMenu">Học Sinh</p>
+                    <SearchBar/>
+                </div>
                 <CalendarRewrite/>
-                <SearchBar/>
-                <p className="titleMenu">Giáo Viên</p>
             </div>
             <div className="listBox">
                 {listOfTeacher}
