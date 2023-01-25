@@ -15,7 +15,7 @@ export default function NavBar(){
         var itemPosNewAnimTop = activeItemNewAnim.position();
         var itemPosNewAnimLeft = activeItemNewAnim.position();
         $(".hori-selector").css({
-            "top":itemPosNewAnimTop.top + "px", 
+            "top":itemPosNewAnimTop.top + "px",
             "left":itemPosNewAnimLeft.left + "px",
             "height": activeWidthNewAnimHeight + "px",
             "width": activeWidthNewAnimWidth + "px"
@@ -28,7 +28,7 @@ export default function NavBar(){
             var itemPosNewAnimTop = $(this).position();
             var itemPosNewAnimLeft = $(this).position();
             $(".hori-selector").css({
-                "top":itemPosNewAnimTop.top + "px", 
+                "top":itemPosNewAnimTop.top + "px",
                 "left":itemPosNewAnimLeft.left + "px",
                 "height": activeWidthNewAnimHeight + "px",
                 "width": activeWidthNewAnimWidth + "px"
@@ -42,12 +42,28 @@ export default function NavBar(){
         });
     }, []);
 
+    function resizeFull(){
+        $(".botNav").children(".unused").css({
+            "display": "flex",
+        });
+        setTimeout(animation, 350);
+    }
+
+    function resizeMin(){
+        $(".botNav").children(".unused").css({
+            "display": "none",
+        });
+        setTimeout(animation, 350);
+    }
+
     return(
-        <div className="navbar">
-            <div className="logoWrap">
+        <div className="navbar" onMouseOver={resizeFull} onMouseOut={resizeMin}>
+            <div className='topNavBar'>
                 <img className="logo" src={require("../../resources/logo.png")} alt="logo"/>
+                <p className='centerContent'>SchoolProtection</p>
             </div>
-            <ul className="navhref" >
+
+            <ul className="navhref">
                 <div className="hori-selector" />
                 <li className='nav-item centerContent active'>
                     <NavLink to="/hocsinh" className="nav-link centerContent">
@@ -64,11 +80,11 @@ export default function NavBar(){
                         <Icon.DoorClosedFill className="icon"/> <i>Cổng Ra Vào</i>
                     </NavLink>
                 </li>
-            </ul>            
+            </ul>
             <div className='botNav'>
-                <img className='icon' src={require("../../resources/schoolLogo.png")} width='65vw' height='65vw' alt='School Logo'/>
-                <Button className="botBtn" onClick={()=>alert("SchoolProtection-web v1")}><Icon.Gear width='100%' height='100%'/></Button>
-                <Button className="botBtn" href="/"><Icon.DoorOpenFill width='100%' height='100%'/></Button>
+                <Button className="botBtn firstBotBtn" onClick={()=>alert("SchoolProtection-web v1")}><Icon.Gear width='100%' height='100%'/></Button>
+                <Button className="botBtn unused" href="/"><Icon.DoorOpenFill width='100%' height='100%'/></Button>
+                <img className='botBtn icon unused' src={require("../../resources/schoolLogo.png")} alt='School Logo'/>
             </div>
         </div>
     )

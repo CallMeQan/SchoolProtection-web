@@ -12,6 +12,12 @@
     font-size: 3vw;
     font-weight: bold;
 }
-.topMenu:last-child {
-    margin-left: auto;
+
+.titleSearch{
+    width: 50%;
+    height: 100%;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
