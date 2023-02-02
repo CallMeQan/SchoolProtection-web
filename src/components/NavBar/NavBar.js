@@ -8,7 +8,7 @@ import $ from 'jquery';
 
 export default function NavBar(){
     function animation(){
-        var tabsNewAnim = $('.navhref');
+        var tabsNewAnim = $('.mainContent');
         var activeItemNewAnim = tabsNewAnim.find('.active');
         var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
         var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
@@ -20,8 +20,8 @@ export default function NavBar(){
             "height": activeWidthNewAnimHeight + "px",
             "width": activeWidthNewAnimWidth + "px"
         });
-        $(".navhref").on("click","li",function(){
-            $('.navhref li').removeClass("active");
+        $(".mainContent").on("click","li",function(){
+            $('.mainContent li').removeClass("active");
             $(this).addClass('active');
             var activeWidthNewAnimHeight = $(this).innerHeight();
             var activeWidthNewAnimWidth = $(this).innerWidth();
@@ -63,7 +63,7 @@ export default function NavBar(){
                 <p className='centerContent'>SchoolProtection</p>
             </div>
 
-            <ul className="navhref">
+            <ul className="mainContent">
                 <div className="hori-selector" />
                 <li className='nav-item centerContent active'>
                     <NavLink to="/hocsinh" className="nav-link centerContent">

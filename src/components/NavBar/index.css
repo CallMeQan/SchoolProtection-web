@@ -13,11 +13,11 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    transition: width 400ms ease;
+    transition: width 350ms ease;
 }
 
 .navbar:hover{
-    width: 16%;
+    width: 20%;
 }
 
 /*Logo of navbar*/
@@ -26,10 +26,11 @@
     transition: all .5s linear;
     height: 100%;
     width: 100%;
+    margin-left: 0.1em;
 }
 
 .topNavBar p {
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     font-weight: bold;
     color: var(--textHighlight);
     width: 70%;
@@ -54,19 +55,19 @@
 }
 
 /*Main of navbar*/
-.navhref li {
+.mainContent li {
     list-style-type: none;
 }
 
 .hori-selector {
     position: absolute;
     height: 100%;
-    transition-duration: 0.5s;
+    transition-duration: 0.4s;
     transition-timing-function: cubic-bezier(0.68, 0, 0.265, 1);
     background-color: var(--main2);
     border-top-left-radius: 2vw;
     border-bottom-left-radius: 2vw;
-    margin-left: 1%;
+    margin-left: 4px;
 }
 
 .centerContent{
@@ -74,7 +75,7 @@
     align-items: center;
 }
 
-.navhref{
+.mainContent{
     display: flex;
     flex-direction: column;
     position: relative;
@@ -87,6 +88,8 @@
 
 .navbar ul li a i{
     display: none;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .navbar ul li a{
@@ -94,17 +97,18 @@
     text-decoration: none;
     font-size: 3vw;
     display: flex;
-    padding-left: 8%;
-    transition-duration: 0.4s;
+    padding-left: 0.5em;
+    transition-duration: 0.1s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     position: relative;
     height: 100%;
     width: 100%;
     font-weight: bold;
-    overflow: hidden;
+
     margin-top: 2vw;
     margin-bottom: 2vw;
     margin-left: 1px;
+    z-index: 2;
 }
 
 /*On hover*/
@@ -127,7 +131,7 @@
 }
 
 
-.navhref > li.active > a{
+.mainContent > li.active > a{
     color: var(--textHighlight3);
     background-color: transparent;
     transition: all 0.7s;
