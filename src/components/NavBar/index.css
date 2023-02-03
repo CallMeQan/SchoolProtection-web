@@ -64,7 +64,7 @@
     height: 100%;
     transition-duration: 0.4s;
     transition-timing-function: cubic-bezier(0.68, 0, 0.265, 1);
-    background-color: var(--main2);
+    background-color: var(--whiteButNotThatWhite);
     border-top-left-radius: 2vw;
     border-bottom-left-radius: 2vw;
     margin-left: 4px;
@@ -93,7 +93,7 @@
 }
 
 .navbar ul li a{
-    color: var(--main2);
+    color: var(--textColor2);
     text-decoration: none;
     font-size: 3vw;
     display: flex;
@@ -111,10 +111,20 @@
     z-index: 2;
 }
 
+.icon{
+    margin-right: 5px;
+}
+
 /*On hover*/
 
 .navbar:hover ul li a{
     font-size: 3vw;
+}
+
+.navbar:hover ul li a:hover{
+    font-size: 3vw;
+    color: var(--textHover);
+    text-decoration: underline;
 }
 
 .navbar:hover ul li a i{
@@ -132,13 +142,9 @@
 
 
 .mainContent > li.active > a{
-    color: var(--textHighlight3);
+    color: var(--textHover);
     background-color: transparent;
     transition: all 0.7s;
-}
-
-.icon{
-    margin-right: 5px;
 }
 
 /*bottom of navbar*/
@@ -152,7 +158,7 @@
 }
 
 .botBtn:hover{
-    color: var(--textHighlight2);
+    color: var(--textHover);
 }
 .botNav img{
     object-fit: contain;
@@ -163,7 +169,7 @@
     height: 90%;
     background-color: var(--main);
     font-weight: bold;
-    color: var(--textHighlight);
+    color: var(--textColor2);
     text-align: left;
     text-decoration: none;
     border-width: 0;

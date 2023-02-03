@@ -1,5 +1,6 @@
 import './index.css';
-import React from 'react'
+import React from 'react';
+import * as Icon from 'react-bootstrap-icons';
 
 export default class FormLogin extends React.Component{
     render(){
@@ -9,14 +10,16 @@ export default class FormLogin extends React.Component{
                     <img className="imgLogo" src={require("../../resources/logo.png")} alt="logo"/>
                     <div className="loginForm">
                         <div className="inputBox">
+                            <Icon.PersonLock/>
                             <input placeholder="Nhập tên đăng nhâp..."/>
                         </div>
                         <div className="inputBox">
+                            <Icon.ShieldLock/>
                             <input type="password" placeholder="Nhập mật khẩu..."/>
                         </div>
-                        <button type='submit' className='btnLogin'>Đăng Nhập</button>
-                        <p className="subtext" style={{display: "flex", justifyContent: "space-between"}}>
-                            - Admin only <img src={require("../../resources/schoolLogo.png")} alt="school" width="15%"/>
+                        <button type='submit' className='btnLogin'><Icon.ArrowRight/></button>
+                        <p className="subtext">
+                            THPT Marie Curie <img src={require("../../resources/schoolLogo.png")} alt="school" width="15%" style={{marginLeft: "1%"}}/>
                         </p>
                     </div>
                 </form>

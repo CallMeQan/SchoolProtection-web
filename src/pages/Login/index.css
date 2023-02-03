@@ -1,41 +1,61 @@
+@import "../../resources/colorscheme.css";
+
 .loginBox{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 4vw;
     border-width: 1px;
-    border-color: #f5f5f5;
+    border-color: #282b30;
     border-style: solid;
     border-radius: 20px;
     padding: 10px;
     box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    background-color: var(--discordMainBackground);
     width: 18%;
 }
 
 .subtext{
     font-style: italic;
-    font-weight: lighter;
-    color: #3b3b3b;
+    font-weight: 100;
+    color: var(--textColor2);
     font-size: 1vw;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .inputBox{
     margin-top: 24px;
     box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 9vh;
+    border-width: 0.5px;
+    border-radius: 10px;
+    border-color: transparent;
+}
+
+.inputBox svg{
+    height: 100%;
+    width: 20%;
+    margin-left: 1%;
 }
 
 .inputBox input{
-    border-top-width: 0;
-    border-left-width: 0;
-    border-right-width: 0;
-    border-bottom-width: 0;
-    height: 40px;
-    width: 90%;
-    font-size: 1.2vw;
-    background:
-            linear-gradient(#9d9d9d, #575757) bottom / 0 2px no-repeat
-            white;
+    height: 90%;
+    width: 80%;
+    font-size: 1.4vw;
+    background: linear-gradient(var(--textHover), var(--buttonColor)) bottom / 0 2px no-repeat;
     transition: 0.5s;
     padding-left: 10px;
+    background-color: var(--discordMainBackground);
+    color: white;
+    border-left-width: 0.5px;
+    border-radius: 10px;
+    border-color: transparent;
 }
 
 .inputBox input:focus{
@@ -43,8 +63,12 @@
     background-size: 100% 2px;
 }
 
+.inputBox input:focus::placeholder {
+    color: transparent;
+}
+
 .inputBox input::placeholder{
-    color: #9f9f9f;
+    color: var(--textColor2);
 }
 
 .remakeFlex{
@@ -54,6 +78,14 @@
     width: 100%;
     height: 100%;
 }
+
+#root{
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    background-color: black;
+}
+
 .imgLogo{
     width: 15vw;
     height: 15vw;
@@ -63,9 +95,9 @@
 .btnLogin {
     width: 100%;
     height: 50px;
-    background-color: #04AA6D;
+    background-color: var(--buttonColor);
     border-width: 0;
-    font-size: 2vw;
+    font-size: 2.5vw;
     text-align: center;
     margin-top: 24px;
     color: white;

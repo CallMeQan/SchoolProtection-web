@@ -2,6 +2,7 @@ import React from 'react';
 import CalendarRewrite from "../../../components/CalendarButton/CalendarRewrite";
 import DivList from '../../../components/DivList/NormalList/DivList';
 import SearchBar from '../../../components/SearchBar/SearchBar';
+import SortClass from '../../../components/SortClass/SortClass';
 import '../index.css';
 
 export default function Student(){
@@ -13,6 +14,7 @@ export default function Student(){
             <div className="topMenu">
                 <div className='titleSearch'>
                     <p className="titleMenu">Học Sinh</p>
+                    <SortClass/>
                     <SearchBar/>
                 </div>
                 <CalendarRewrite/>

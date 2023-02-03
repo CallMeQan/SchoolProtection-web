@@ -1,11 +1,36 @@
 :root{
     /*--main: #48B3A2;*/
-    --main: #2674CF;
-    --main2: #F9F9F9;
+    --main: #e69023;
+    --main2: #1e2124;
+    /* --main2: #F9F9F9;
     --textColor: #333333;
     --textHighlight: white;
-    --textHighlight2: #8ed0ff;
-    --textHighlight3: #4082D4;
+    --textHover: #8ed0ff;
+    --textColorNav: #4082D4;
     --secondary: #ffff;
-    --third: #fff;
+    --third: #fff; */
+
+    --buttonColor: #e69023;
+    --textColor: #1e2124;
+    --textColor2:  white;
+    --textHover: #ffc881;
+    --whiteButNotThatWhite: #F9F9F9;
+    --discordMainBackground: #1e2124;
 }
+
+/* const newColors = {
+  gradient: {
+    mainBtn: ['#4a60fc', '#3e56fc', '#b758fd'],
+    mainBtn2: ['#5a71fa', '#5468f8', '#c980ff'],
+    mainText: ['#4a60fc', '#3e56fc', '#b758fd'],
+  },
+  easyBlue: '#e69023',
+  easyBlue2: '#8da1ff',
+  easyBlue3: '#a6dfff',
+  normalBlue: '#3e56fc',
+  normalPurple: '#b758fd',
+  easyPurple: '#c980ff',
+  white: '#FFFFFF',
+  easyWhite: '#ECEFF4',
+};
+export default newColors; */

@@ -11,8 +11,8 @@
 .CalendarBtn{
     width: 15%;
     height: 15%;
-    background-color: var(--main2);
-    color: var(--textHighlight3);
+    background-color: var(--whiteButNotThatWhite);
+    color: var(--buttonColor);
     border-width: 0;
     z-index: 1;
     margin-left: auto;
@@ -21,7 +21,7 @@
     margin-top: 0.3vw;
 }
 .CalendarBtn:hover{
-    color: var(--textHighlight2);
+    color: var(--textHover);
 }
 
 .react-calendar {
